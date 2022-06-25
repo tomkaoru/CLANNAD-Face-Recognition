@@ -1,7 +1,6 @@
 tensorflow-cpu==2.7.0
 keras==2.7.0
 numpy==1.19.5
-opencv_python==4.5.5.64
+opencv-python==4.5.5.64
 Pillow==9.1.1
-opencv-python
 streamlit==1.10.0
