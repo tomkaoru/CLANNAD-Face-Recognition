@@ -1,7 +1,7 @@
 import cv2
 import os
 import numpy as np
-from scipy import ndimage
+# from scipy import ndimage
 
 def main():
     folder_dir = ["fuko","kotomi","kyou","nagisa","ryou","tomoya","tomoyo","youhei"]
