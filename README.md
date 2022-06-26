@@ -62,9 +62,9 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 
 
 3 . **Create a model. ```train.py```**
-- KerasでSequentialモデル（4層のニューラルネットワーク）を作成します。そして100x100のサイズにリサイズした訓練用画像全てに対して学習させます。リサイズした理由は、```lbpcascade_animeface.xml```で切り取られた画像は正方形ですが、サイズが同じとは限らないためです。
-- モデルはそれぞれのマスのRGB情報（100x100x3 = 30000）を入力として受け入れ、8つの出力層（8人のキャラクターを認識するため）があります。一番出力値が高いキャラクターを画像のキャラクターとして認識します。
-- エポック数を30（過学習しない程度）に設定しました。
+- Created a sequential model (four-layer neural network) using Keras. Then trained the model on training images resized to 100x100. 
+- Model takes in rgb information from all pixels (100x100x3 = 30000). It has the output layer with 8 nodes (for 8 characters). The character with the highest output value is the one the model recognize as the character in the image.
+- Set the number of epochs to 30 (to prevent overfitting).
 
     ```
     Epoch 21/30
@@ -89,17 +89,17 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
     483/483 [==============================] - 6s 13ms/step - loss: 0.0513 - accuracy: 0.9882
     ```
 4 . **Test the model. ```train.py```**
-- モデルをテスト用画像でテストした結果、全体の正解率は226 / 241 = 93.8%でした。
-- 岡崎朋也は、訓練用画像の枚数が一番多かったためか、全てのテスト用画像で正確に認識しました。
-- 姉妹の藤林杏と藤林涼が同じ髪色で、訓練用画像の枚数が他のキャラクターと比べ少なかったこともあってか、正解率が他のキャラクターより低い結果となりました。
+- The accuracy of the model tested on test set is 226 / 241 = 93.8%.
+- The model correctly recognized Tomoya Okazaki, who had the most number of training images, on all of his test images. 
+- The model did not do well on test images of Kyou and Ryou Fujibayashi (twin sisters) who have the same hair color and have less number of training images compared to other characters.
 
 
-  |  キャラクター   |   正解数  |  テスト用画像の枚数   | 正解率   | キャラクター   |  正解数   |  テスト用画像の枚数   | 正解率   |
+  |  Character   |   # of correctly predicted images  |  # of test images   | Accuracy   | Character   |  # of correctly predicted images   |  # of test images   | Accuracy   |
   | --- | --- | --- | --- | --- | --- | --- | --- | 
-  |   伊吹風子  |  26   |   27  |  96.3%   |  一ノ瀬ことみ   |  24   | 26   |  92.3%  | 
-  |  藤林杏   |   17  |  20   |   85%  |  古川渚   |  43   |  45   |  95.6%   | 
-  |  藤林涼   |  15   |   18  |   83.3%  |   岡崎朋也  |  55   |  55   |   100%    | 
-  |  坂上智代   |  23   |  26   |  88.5%  |  春原陽平   |  23   |  24   |  95.8%   | 
+  |   Fuko Ibuki  |  26   |   27  |  96.3%   |  Kotomi Ichinose   |  24   | 26   |  92.3%  | 
+  |  Kyou Fujibayashi   |   17  |  20   |   85%  |  Nagisa Furukawa   |  43   |  45   |  95.6%   | 
+  |  Ryou Fujibayashi   |  15   |   18  |   83.3%  |   Tomoya Okazaki  |  55   |  55   |   100%    | 
+  |  Tomoyo Sakagami   |  23   |  26   |  88.5%  |  Youhei Sunohara  |  23   |  24   |  95.8%   | 
 
 5 . **Create a program to take in an image and output the name of the character(s) and their location in the image.```test.py```**
 
