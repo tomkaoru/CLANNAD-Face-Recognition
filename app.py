@@ -21,7 +21,7 @@ colors = [
 
 def main():
     st.title("CLANNAD Face Detection")
-    st.write('This program takes in an image and detects the face(s) of character(s) from the anime CLANNAD. Then it outputs the location of their face(s) in the input image.')
+    st.write('This program takes in an image and detects the face(s) of character(s) from the anime CLANNAD. Then it outputs their name and location within the input image.')
     st.write('The program can detect 8 characters: Tomoya Okazaki, Nagisa Furukawa, Kyou Fujibayashi, Ryou Fujibayashi, Tomoyo Sakagami, Fuko Ibuki, Kotomi Ichinose, Youhei Sunohara')
     st.write('Detail of each character: '+'https://www.tbs.co.jp/clannad/clannad1/04chara/chara.html')
     reading_model = st.empty()
