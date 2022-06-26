@@ -147,11 +147,5 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 | ------ |
 | <img width="1439" alt="Screen Shot 2022-06-26 at 13 20 10" src="https://user-images.githubusercontent.com/52717342/175799260-cb8ab7e3-ba52-4e46-919c-396fdcfbf745.png"> |
 
-| Output | 
-| ------ |
-| <img width="1439" alt="Screen Shot 2022-06-25 at 23 15 54" src="https://user-images.githubusercontent.com/52717342/175807453-962d14be-2376-4c7b-815c-f9d54187823a.png"> |
-
-
-
 
 Created by Ryota Torii <rtorii@protonmail.com> on 06/26/22
