@@ -102,52 +102,52 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
   |  Tomoyo Sakagami   |  23   |  26   |  88.5%  |  Youhei Sunohara  |  23   |  24   |  95.8%   | 
 
 5 . **Create a program to take in an image and output the name of the character(s) and their location in the image.```test.py```**
+  
+  The program outputs an image showing the name and location of the character on a white background. I originally wanted to modify the input image, i.e. I wanted put an square on each faces detected. But I choose not to, because I saw articles stating that modifying anime images (which the source does not permit them to be modified) and posting the modified images on the internet infringes copyright. 
 
-  アニメの画像（出典元が加工を許可していないもの）を加工し、インターネットに掲載することは著作権を侵害するという記事を見たので、今回は、白色の背景にキャラクターの名前と位置を示す画像を出力しました。  
+**What the program does step by step：**
+1. Uses ```lbpcascade_animeface.xml``` to detect face(s) in input image/
+2. Gives each facial image to the model, and recognizes the character with the highest output value as the one in the image.
+3. Outputs an image showing the name and location of the character on a white background.
 
-**プログラムの手順：**
-1. ```lbpcascade_animeface.xml```を使用し、画像から顔を認識する。
-2. 認識した顔それぞれをモデルに入力し、出力の中で最も値が高いキャラクターを画像のキャラクターとして認識する。
-3. 認識したキャラクターの名前と位置を示す画像を出力する。
-
-  | 入力画像 | 出力画像 |
+  | Input image | Output image |
   | ------ | ------ |
   | ![5aca841a5e7f9cb1fa2fe36d74f51c486e17d7d2d0715424effb70ab](https://user-images.githubusercontent.com/52717342/175799918-d6354880-c3ba-4f1b-829c-94e07b80b43e.jpeg) | ![f45514849387e57cca1283ba6311a07841285ef809d10fd42e28842f](https://user-images.githubusercontent.com/52717342/175799923-161d704f-fdc0-4945-ad04-cc6cd7823cb7.jpeg) |
-  | © VisualArt's/Key/光坂高校演劇部 ／引用元: [アニメミル](https://animemiru.jp/articles/7675/) |  |
+  | © VisualArt's/Key/光坂高校演劇部 ／Source: [アニメミル](https://animemiru.jp/articles/7675/) |  |
 
-- 目をつぶっている古川渚と泣いている春原陽平を認識できました。坂上智代は横顔のため、```lbpcascade_animeface.xml```は顔として認識しません。
+- Detected Nagisa Furikawa who is closing her eyes and the crying Youhei Sunohara. Tomoyo Sakagami's face is not detected by ```lbpcascade_animeface.xml``` because she is in profilee。
 
-| 入力画像 | 出力画像 |
+| Input image | Output image |
 | ------ | ------ |
 | ![25a02d32019f1987c8fa9a83b159cfa6b891afbe2346d2d3122d07b10cc1766f _SX1080_](https://user-images.githubusercontent.com/52717342/175796378-d3f18259-b42b-45ee-ae19-a43b3e3724a6.jpg) | ![696b9da8dc6eac7d29d7a1c5d4db7dd0f19f2c69e7944f40a04813ec](https://user-images.githubusercontent.com/52717342/175796921-2646e6b2-0125-444b-9e34-ff99aa62e089.jpeg) |
-| © VisualArt's/Key/光坂高校演劇部 ／引用元: [Amazon](https://www.amazon.co.jp/CLANNAD-AFTER-STORY%E3%80%90TBS%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89%E3%80%91/dp/B00FYKXTGS) |  |
+| © VisualArt's/Key/光坂高校演劇部 ／Source: [Amazon](https://www.amazon.co.jp/CLANNAD-AFTER-STORY%E3%80%90TBS%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89%E3%80%91/dp/B00FYKXTGS) |  |
 
-- 姉妹の藤林涼と藤林杏を認識。
+- Recognizing Ryou and Kyou Fujibayashi (twin sisters)。
 
-| 入力画像 | 出力画像 |
+| Input image | Output image |
 | ------ | ------ |
 | ![t02200154_0342024012866838688](https://user-images.githubusercontent.com/52717342/175796415-5c420ac1-446b-4d48-89a6-528d5ed6f1c9.jpeg) | ![5c3ed7ae87c874586f77c27bedb77fd96842877d04f4996b4f4db944](https://user-images.githubusercontent.com/52717342/175796419-63f97fc3-b029-4b31-85af-dd06d8694dc9.jpeg) |
-| © VisualArt's/Key/光坂高校演劇部 ／引用元: [ameblo](https://ameblo.jp/i-was-me/entry-11786945737.html) |  |
+| © VisualArt's/Key/光坂高校演劇部 ／引用元: [Source](https://ameblo.jp/i-was-me/entry-11786945737.html) |  |
 
-- 認識を間違えたケース: 坂上智代を藤林涼と認識。
+- A case of misrecognition: Reecognized Tomoyo Sakagami as Ryou Fujibayashi. 
 
-| 入力画像 | 出力画像 |
+| Input image | Output image |
 | ------ | ------ |
 | ![Bz1tgcTCcAACHuH](https://user-images.githubusercontent.com/52717342/175796900-08142f4f-2b32-4bb4-835d-35b1c8686891.jpeg) | ![f8db8d5e20a944cf27be85d13ea744fd469e7283e88fd5c957ba4421](https://user-images.githubusercontent.com/52717342/175796899-7eb7d6d6-e4d3-47ca-86ad-f2b06861c429.jpeg) |
-| © VisualArt's/Key/光坂高校演劇部 ／引用元: [Twitter](https://twitter.com/clannadjudo0327/status/521693560672772097/photo/1) |  |
+| © VisualArt's/Key/光坂高校演劇部 ／Source: [Twitter](https://twitter.com/clannadjudo0327/status/521693560672772097/photo/1) |  |
 
 6 . **Use Streamlit to convert the program into a web app.**
-- Webアプリのリンク: https://rtorii-clannad-face-detection-app-6furpy.streamlitapp.com/
+- Link to the web app: https://rtorii-clannad-face-detection-app-6furpy.streamlitapp.com/
 
-**Webアプリの使用方法:**
-1.  CLANNADのキャラクターの顔が写っている画像をアップロードします。
-2.  ```Process```ボタンを押すと出力画像が表示されます。
+**How to use it:**
+1.  Upload an image with the character(s) from CLANNAD on it.
+2.  Press the ```Process``` Button to see the output.
 
-| ホームページ | 
+| Homepage | 
 | ------ |
 | <img width="1439" alt="Screen Shot 2022-06-26 at 13 20 10" src="https://user-images.githubusercontent.com/52717342/175799260-cb8ab7e3-ba52-4e46-919c-396fdcfbf745.png"> |
 
-| 出力 | 
+| Output | 
 | ------ |
 | <img width="1439" alt="Screen Shot 2022-06-25 at 23 15 54" src="https://user-images.githubusercontent.com/52717342/175807453-962d14be-2376-4c7b-815c-f9d54187823a.png"> |
 
