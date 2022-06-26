@@ -13,7 +13,7 @@ colors = [
 (128,0,128),#purple
 (200,100,240),#cornsilk
 (180,0,180), #fuchsia
-(255,255,0),#yellow
+(190,190,0),#yellow
 (0,0,128), #navy
 (200,200,200)# silver
 ]
