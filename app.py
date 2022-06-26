@@ -40,7 +40,7 @@ def load_nnmodel_and_cascade():
     return model, cascade
 
 def process(input_img, model, anime_cascade):
-    input_img = Image.open(input_img)
+    input_img = Image.open(input_img).convert('RGB')
     input_img = input_img.save("img.jpg")
     input_img = cv2.imread("img.jpg",1) #  test image
     img_gray=cv2.cvtColor(input_img, cv2.COLOR_BGR2GRAY)
