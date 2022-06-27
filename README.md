@@ -129,12 +129,6 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 | ![t02200154_0342024012866838688](https://user-images.githubusercontent.com/52717342/175796415-5c420ac1-446b-4d48-89a6-528d5ed6f1c9.jpeg) | ![5c3ed7ae87c874586f77c27bedb77fd96842877d04f4996b4f4db944](https://user-images.githubusercontent.com/52717342/175796419-63f97fc3-b029-4b31-85af-dd06d8694dc9.jpeg) |
 | © VisualArt's/Key/光坂高校演劇部 ／引用元: [Source](https://ameblo.jp/i-was-me/entry-11786945737.html) |  |
 
-- A case of misrecognition: Recognized Tomoyo Sakagami as Ryou Fujibayashi. 
-
-| Input image | Output image |
-| ------ | ------ |
-| ![Bz1tgcTCcAACHuH](https://user-images.githubusercontent.com/52717342/175796900-08142f4f-2b32-4bb4-835d-35b1c8686891.jpeg) | ![f8db8d5e20a944cf27be85d13ea744fd469e7283e88fd5c957ba4421](https://user-images.githubusercontent.com/52717342/175796899-7eb7d6d6-e4d3-47ca-86ad-f2b06861c429.jpeg) |
-| © VisualArt's/Key/光坂高校演劇部 ／Source: [Twitter](https://twitter.com/clannadjudo0327/status/521693560672772097/photo/1) |  |
 
 6 . **Use Streamlit to convert the program into a web app.**
 - Link to the web app: https://rtorii-clannad-face-detection-app-6furpy.streamlitapp.com/
