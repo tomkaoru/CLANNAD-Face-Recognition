@@ -18,7 +18,7 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 
 - ```lbpcascade_animeface.xml``` - [Cascade file](https://github.com/nagadomi/lbpcascade_animeface) used to detect anime faces.
 - ```face.py``` - Uses ```lbpcascade_animeface.xml``` to detect faces from images and save the facial images.
-- ```da.py``` - Used to increase the amount of train data by creating images of different blur levels and brightness. 
+- ```da.py``` - increases the number of training images by creating images of different blur levels and brightness. 
 - ```train.py``` - Creates the model and tests it on test data.
 - ```model_200_160_80_epoch30_30.h5``` - Model to detect CLANNAD character from facial images.
 - ```test.py``` - Takes in an image and outputs the name of the character(s) and their location in the image.
