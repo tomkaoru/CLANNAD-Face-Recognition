@@ -1,5 +1,5 @@
 from keras.models import Sequential
-from keras.layers import Activation, Dense, Dropout
+from keras.layers import Dense, Dropout
 from keras.utils.np_utils import to_categorical
 from tensorflow.keras.optimizers import Adam
 from PIL import Image
