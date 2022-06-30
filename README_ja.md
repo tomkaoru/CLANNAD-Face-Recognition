@@ -120,13 +120,6 @@
 | ![25a02d32019f1987c8fa9a83b159cfa6b891afbe2346d2d3122d07b10cc1766f _SX1080_](https://user-images.githubusercontent.com/52717342/175796378-d3f18259-b42b-45ee-ae19-a43b3e3724a6.jpg) | ![696b9da8dc6eac7d29d7a1c5d4db7dd0f19f2c69e7944f40a04813ec](https://user-images.githubusercontent.com/52717342/175796921-2646e6b2-0125-444b-9e34-ff99aa62e089.jpeg) |
 | © VisualArt's/Key/光坂高校演劇部 ／引用元: [Amazon](https://www.amazon.co.jp/CLANNAD-AFTER-STORY%E3%80%90TBS%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89%E3%80%91/dp/B00FYKXTGS) |  |
 
-- 姉妹の藤林椋と藤林杏を認識。
-
-| 入力画像 | 出力画像 |
-| ------ | ------ |
-| ![t02200154_0342024012866838688](https://user-images.githubusercontent.com/52717342/175796415-5c420ac1-446b-4d48-89a6-528d5ed6f1c9.jpeg) | ![5c3ed7ae87c874586f77c27bedb77fd96842877d04f4996b4f4db944](https://user-images.githubusercontent.com/52717342/175796419-63f97fc3-b029-4b31-85af-dd06d8694dc9.jpeg) |
-| © VisualArt's/Key/光坂高校演劇部 ／引用元: [ameblo](https://ameblo.jp/i-was-me/entry-11786945737.html) |  |
-
 6 . **Streamlitで、プログラムをWebアプリとして公開。**
 - Webアプリのリンク: https://rtorii-clannad-face-detection-app-6furpy.streamlitapp.com/
 
