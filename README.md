@@ -4,7 +4,7 @@
 
 **Description：**
 
-A program that detects the face(s) of character(s) from the anime CLANNAD and outputs the name of the character(s) and their location in the image. The reason I choose CLANNAD for face recognition is that the characters from CLANNAD have similar eye shapes and I thought it is difficult to correctly recognize each character compared to characters in other animes.  The program can recognize 8 characters mentioned on CLANNAD's [official homepage](https://www.tbs.co.jp/clannad/clannad1/04chara/chara.html).
+A program that detects the face(s) of character(s) from the anime CLANNAD and outputs the name of the character(s) and their location in the image. The reason I choose CLANNAD for face recognition is that the characters from CLANNAD have similar eye shapes and I thought it is difficult to correctly recognise each character compared to characters in other animes.  The program can recognise 8 characters mentioned on CLANNAD's [official homepage](https://www.tbs.co.jp/clannad/clannad1/04chara/chara.html).
 
   | Input image | Output image |
   | ------ | ------ |
@@ -20,7 +20,7 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 - ```face.py``` - Uses ```lbpcascade_animeface.xml``` to detect faces from images and save the facial images.
 - ```da.py``` - increases the number of training images by creating images of different blur levels and brightness. 
 - ```train.py``` - Creates the model and tests it on test data.
-- ```model_200_160_80_epoch30_30.h5``` - Model to recognize CLANNAD character from facial images.
+- ```model_200_160_80_epoch30_30.h5``` - Model to recognise CLANNAD character from facial images.
 - ```test.py``` - Takes in an image and outputs the name of the character(s) and their location in the image.
 - ```app.py``` - Uses Streamlit to make a web app.
   - Link to the app: https://rtorii-clannad-face-recognition-app-95w7hy.streamlitapp.com/
@@ -63,7 +63,7 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 
 3 . **Create a model. ```train.py```**
 - Created a sequential model (four-layer neural network) using Keras. Then trained the model on training images resized to 100x100. 
-- Model takes in RGB information from all pixels (100x100x3 = 30000). It has the output layer with 8 nodes (for 8 characters). The character with the highest output value is the one the model recognizes as the character in the image.
+- Model takes in RGB information from all pixels (100x100x3 = 30000). It has the output layer with 8 nodes (for 8 characters). The character with the highest output value is the one the model recognises as the character in the image.
 - Set the number of epochs to 30 (to prevent overfitting).
 
     ```
@@ -90,7 +90,7 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
     ```
 4 . **Test the model. ```train.py```**
 - The accuracy of the model tested on the test set is 226 / 241 = 93.8%.
-- The model correctly recognized Tomoya Okazaki, who had the most training images, on all of his test images. 
+- The model correctly recognised Tomoya Okazaki, who had the most training images, on all of his test images. 
 - The model did not do well on test images of Kyou and Ryou Fujibayashi (twin sisters) who have the same hair color and have less training images compared to other characters.
 
 
@@ -107,7 +107,7 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 
 **What the program does step by step：**
 1. Uses ```lbpcascade_animeface.xml``` to detect face(s) in input image/
-2. Gives each facial image to the model and recognizes the character with the highest output value as the one in the image.
+2. Gives each facial image to the model and recognises the character with the highest output value as the one in the image.
 3. Outputs an image showing the name and location of the character(s) on a white background.
 
   | Input image | Output image |
@@ -115,7 +115,7 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
   | ![5aca841a5e7f9cb1fa2fe36d74f51c486e17d7d2d0715424effb70ab](https://user-images.githubusercontent.com/52717342/175799918-d6354880-c3ba-4f1b-829c-94e07b80b43e.jpeg) | ![f45514849387e57cca1283ba6311a07841285ef809d10fd42e28842f](https://user-images.githubusercontent.com/52717342/175799923-161d704f-fdc0-4945-ad04-cc6cd7823cb7.jpeg) |
   | © VisualArt's/Key/光坂高校演劇部 ／Source: [アニメミル](https://animemiru.jp/articles/7675/) |  |
 
-- Recognized Nagisa Furukawa who is closing her eyes and the crying Youhei Sunohara. Tomoyo Sakagami's face is not detected by ```lbpcascade_animeface.xml``` because she is in profile。
+- Recognised Nagisa Furukawa who is closing her eyes and the crying Youhei Sunohara. Tomoyo Sakagami's face is not detected by ```lbpcascade_animeface.xml``` because she is in profile。
 
 | Input image | Output image |
 | ------ | ------ |
