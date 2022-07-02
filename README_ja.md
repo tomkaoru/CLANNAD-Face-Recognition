@@ -21,7 +21,7 @@
 - ```model_200_160_80_epoch30_30.h5``` - 顔画像からCLANNADのキャラクターを認識するモデル。
 - ```test.py``` - 画像を受け入れ、画像から認識したキャラクターの名前と位置を含む画像を出力するプログラム。
 - ```app.py``` - Streamlitを使用し、```test.py```をWebアプリにするプログラム。
-  - Webアプリのリンク: https://rtorii-clannad-face-detection-app-6furpy.streamlitapp.com/
+  - Webアプリのリンク: https://rtorii-clannad-face-recognition-app-95w7hy.streamlitapp.com/
 
 
 # 順番にしたこと
@@ -121,7 +121,7 @@
 | © VisualArt's/Key/光坂高校演劇部 ／引用元: [Amazon](https://www.amazon.co.jp/CLANNAD-AFTER-STORY%E3%80%90TBS%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89%E3%80%91/dp/B00FYKXTGS) |  |
 
 6 . **Streamlitで、プログラムをWebアプリとして公開。**
-- Webアプリのリンク: https://rtorii-clannad-face-detection-app-6furpy.streamlitapp.com/
+- Webアプリのリンク: https://rtorii-clannad-face-recognition-app-95w7hy.streamlitapp.com/
 
 **Webアプリの使用方法:**
 1.  CLANNADのキャラクターの顔が写っている画像をアップロードします。
