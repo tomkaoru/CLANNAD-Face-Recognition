@@ -1,10 +1,10 @@
-# CLANNAD Face Detection
+# CLANNAD Face Recognition
 
-日本語の説明：https://github.com/rtorii/CLANNAD-Face-Detection/blob/main/README_ja.md
+日本語の説明：https://github.com/rtorii/CLANNAD-Face-Recognition/blob/main/README_ja.md
 
 **Description：**
 
-A program that detects the face(s) of character(s) from the anime CLANNAD and outputs the name of the character(s) and their location in the image. The reason I choose CLANNAD for face detection is that the characters from CLANNAD have similar eye shapes and I thought it is difficult to correctly detect each character compared to characters in other animes.  The program can detect 8 characters mentioned on CLANNAD's [official homepage](https://www.tbs.co.jp/clannad/clannad1/04chara/chara.html).
+A program that detects the face(s) of character(s) from the anime CLANNAD and outputs the name of the character(s) and their location in the image. The reason I choose CLANNAD for face recognition is that the characters from CLANNAD have similar eye shapes and I thought it is difficult to correctly recognize each character compared to characters in other animes.  The program can recognize 8 characters mentioned on CLANNAD's [official homepage](https://www.tbs.co.jp/clannad/clannad1/04chara/chara.html).
 
   | Input image | Output image |
   | ------ | ------ |
@@ -20,10 +20,10 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 - ```face.py``` - Uses ```lbpcascade_animeface.xml``` to detect faces from images and save the facial images.
 - ```da.py``` - increases the number of training images by creating images of different blur levels and brightness. 
 - ```train.py``` - Creates the model and tests it on test data.
-- ```model_200_160_80_epoch30_30.h5``` - Model to detect CLANNAD character from facial images.
+- ```model_200_160_80_epoch30_30.h5``` - Model to recognize CLANNAD character from facial images.
 - ```test.py``` - Takes in an image and outputs the name of the character(s) and their location in the image.
 - ```app.py``` - Uses Streamlit to make a web app.
-  - Link to the app: https://rtorii-clannad-face-detection-app-6furpy.streamlitapp.com/
+  - Link to the app: https://rtorii-clannad-face-recognition-app-95w7hy.streamlitapp.com/
 
 
 # What I did step by step
@@ -115,7 +115,7 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
   | ![5aca841a5e7f9cb1fa2fe36d74f51c486e17d7d2d0715424effb70ab](https://user-images.githubusercontent.com/52717342/175799918-d6354880-c3ba-4f1b-829c-94e07b80b43e.jpeg) | ![f45514849387e57cca1283ba6311a07841285ef809d10fd42e28842f](https://user-images.githubusercontent.com/52717342/175799923-161d704f-fdc0-4945-ad04-cc6cd7823cb7.jpeg) |
   | © VisualArt's/Key/光坂高校演劇部 ／Source: [アニメミル](https://animemiru.jp/articles/7675/) |  |
 
-- Detected Nagisa Furukawa who is closing her eyes and the crying Youhei Sunohara. Tomoyo Sakagami's face is not detected by ```lbpcascade_animeface.xml``` because she is in profile。
+- Recognized Nagisa Furukawa who is closing her eyes and the crying Youhei Sunohara. Tomoyo Sakagami's face is not detected by ```lbpcascade_animeface.xml``` because she is in profile。
 
 | Input image | Output image |
 | ------ | ------ |
@@ -124,7 +124,7 @@ A program that detects the face(s) of character(s) from the anime CLANNAD and ou
 
 
 6 . **Use Streamlit to convert the program into a web app.**
-- Link to the web app: https://rtorii-clannad-face-detection-app-6furpy.streamlitapp.com/
+- Link to the web app: https://rtorii-clannad-face-recognition-app-95w7hy.streamlitapp.com/
 
 **How to use it:**
 1.  Upload an image with the character(s) from CLANNAD on it.
