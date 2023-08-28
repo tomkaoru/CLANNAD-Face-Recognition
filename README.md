@@ -1,6 +1,6 @@
 # CLANNAD Face Recognition
 
-日本語の説明：https://github.com/rtorii/CLANNAD-Face-Recognition/blob/main/README_ja.md
+日本語の説明：https://github.com/tomkaoru/CLANNAD-Face-Recognition/blob/main/README_ja.md
 
 **Description：**
 
